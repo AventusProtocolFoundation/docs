@@ -31,7 +31,7 @@ Create a governance proposal to be voted on
 |`votingStart`| uint | ✘ | UNIX epoch timestamp for the start of the voting period |
 |`revealingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote revealing period |
 |`revealingEnd`| uint | ✘ | UNIX epoch timestamp for the end of the vote revealing period |
-|`deposit`| uint | ✘ | The deposit value in AVT for the new corporate governance proposal |
+|`deposit`| uint | ✘ | The deposit value in AVT for the new governance proposal |
 |`bytecode`| bytes | ✘ | The bytecode to be run if the proposal succeeds |
 
 #### Method: `endGovernanceProposal`
@@ -201,7 +201,7 @@ Create a challenge for the specified member
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
 |`memberAddress`| address | Address of the member to be challenged |
-|`memberType` | string | Type of the member to be challenged |
+|`memberType` | string | Type of the member to be challenged, ie Primary or Secondary |
 
 #### Response: `LogMemberChallenged`
 
@@ -209,8 +209,8 @@ Create a challenge for the specified member
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`memberAddress`| address |	✔ |	Address of the member been challenged |
-|`memberType` | string  | ✘ | Type of the member been challenged, either Primary or Secondary |
+|`memberAddress`| address |	✔ |	Address of the member being challenged |
+|`memberType` | string  | ✘ | Type of the member being challenged, ie Primary or Secondary |
 |`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
 |`lobbyingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote lobbying period |
 |`votingStart`| uint | ✘ | UNIX epoch timestamp for the start of the voting period |
@@ -225,8 +225,8 @@ Ends a challenge on the specified member
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`memberAddress`| address | Address of the member to stop being challenged |
-|`memberType` | string | Type of the member to stop being challenged, either Primary or Secondary |
+|`memberAddress`| address | Address of the member for which the challenge should end|
+|`memberType` | string | Type of the member, ie Primary or Secondary |
 
 #### Response: `LogMemberChallengeEnded`
 
@@ -234,8 +234,8 @@ Ends a challenge on the specified member
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`memberAddress`| address |	✔ |	Address of the member been ended the challenge |
-|`memberType` | string  | ✘ | Type of the member been ended the challenge, either Primary or Secondary |
+|`memberAddress`| address |	✔ |	Address of the member for which the challenge has ended |
+|`memberType` | string  | ✘ | Type of the member, ie Primary or Secondary |
 |`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
 |`votesFor`| uint | ✘ | Total number of votes *for* a challenge |
 |`votesAgainst`| uint | ✘ | Total number of votes *against* a challenge |
@@ -249,7 +249,7 @@ Check if the given member is allowed to use the Aventus Protocol or not.
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
 |`memberAddress`| address | Address of the member to be checked |
-|`memberType` | string | Type of the member to be checked, either Primary or Secondary |
+|`memberType` | string | Type of the member to be checked, ie Primary or Secondary |
 
 #### Response
 
@@ -267,13 +267,13 @@ Gets the deposit paid by the specified member
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
 |`memberAddress`| address | Address of the member |
-|`memberType` | string | Type of the member, either Primary or Secondary |
+|`memberType` | string | Type of the member, ie Primary or Secondary |
 
 #### Response
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`memberDepositInAVT`| uint | ✘ | The amount of AVT been deposited to events by the member, expressed in attoavts |
+|`memberDepositInAVT`| uint | ✘ | The amount of AVT that has been deposited by the member, expressed in attoavts |
 
 ## Voting
 
@@ -325,7 +325,7 @@ Get the ending time of a vote's revealing period
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`votingRevealEndTime`| uint | UNIX epoch timestamp for the revealing period ends; zero if no matching proposalId. |
+|`votingRevealEndTime`| uint | UNIX epoch timestamp for when the revealing period ends; zero if no matching proposalId. |
 
 #### Method: `castVote`
 
@@ -338,7 +338,7 @@ Cast a vote on one of a given proposal's options
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
 |`proposalId` | uint | A unique identifier for the challenge on the Protocol |
-|`secret` | bytes32 | The secret vote: Sha3(signed Sha3(option ID)) |
+|`secret` | bytes32 | The secret vote: hashed(signedSecret) where signedSecret is signed(hashed((proposalId * 10) + option ID))) |
 
 #### Response: `LogVoteCast`
 
@@ -381,7 +381,7 @@ Reveal a vote on a proposal
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`signedMessage` | bytes | A signed message |
+|`signedMessage` | bytes | The signed secret: signed(hashed((proposalId * 10) + optionId)) |
 |`proposalId` | uint | A unique identifier for the challenge on the Protocol |
 |`optId` | uint | ID of option that was voted on |
 
