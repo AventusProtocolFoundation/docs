@@ -7,7 +7,14 @@ Find below a high-level overview of the Aventus Classic Protocol and how to inte
 
 ## Contracts
 
-_Rinkeby contract addresses placeholder_
+Rinkeby contract addresses
+
+- **AVT** 0x624CAb4a84b5172D39D320B7AE7191B1458ADdf4
+- **AVTFaucet** 0x3D125E619955623d463Cf1a62A316356bB3b1C2D
+- **AVTManager** 0xC0Cf68c40c1BD1f4EDDfac4648Fa772A21Ee0030
+- **MembersManager** 0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647
+- **EventsManager** 0x3Ea603A3B80b621e3253dc3b3D80db9B5799AdA8
+- **ProposalsManager** 0xE4F3A588140ec425aF307C7aED873188a9b9534e
 
 All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory:
 
@@ -26,7 +33,7 @@ Certain interactions with the Aventus Protocol require a deposit using the Proto
 
 As the Protocol is currently deployed to Rinkeby we've introduced an AVT Faucet (similar to Ethereum's faucet) to release testnet AVTs for use with the Protocol.
 
-This can be accessed via the AVTFaucet contract deployed on Rinkeby [here](TODO).
+This can be accessed via the AVTFaucet contract deployed on Rinkeby - see above.
 
 #### Event Deposit
 

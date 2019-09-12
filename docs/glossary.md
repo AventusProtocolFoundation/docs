@@ -51,6 +51,7 @@ title: Glossary
 
 ## AVT
 
+- **Attoavt** the smallest unit of AVT, 1 attoavt is 10^-18 AVT
 - **Aventus Community** is made up of _AVT_ token holders interested in utilising the _Aventus Protocol_
 - **AVT** is the [ERC-20 token](https://en.wikipedia.org/wiki/ERC-20) used in the _Aventus Protocol_ (originally referred to as an AventCoin many moons ago)
 - **Challenge** The _Aventus Community_ can challenge the legitimacy of _Merkle Leaf_ on the _Protocol_. This is incentivised by the challenger winning the _deposit_ of _AVT_ put down by the original _Validator_ if a challenge is successful
