@@ -1,0 +1,7 @@
+{
+  "docs": {
+    "Aventus": ["intro"],
+    "Aventus Classic": ["overview-classic", "aventus-classic", "proposals-classic", "glossary"],
+    "Resources": ["glossary"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version-0.6-docs": {
+    "Introduction": [
+      "version-0.6-intro"
+    ],
+    "Aventus Classic": [
+      "version-0.6-aventus-classic",
+      "version-0.6-proposals-classic"
+    ]
+  }
+}
