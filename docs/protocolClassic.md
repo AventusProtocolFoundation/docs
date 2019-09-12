@@ -130,7 +130,7 @@ We refer to the user calling this endpoint as the _eventOwner_. Identity on Ethe
 
 #### Method: `createEvent`
 
-> Note: Event creation requires a deposit in AVT, and is therefor challengeable by other actors in the network. See [Event Challenges](/proposals-classic#event-challenges)
+> Note: Event creation requires a deposit in AVT, and is therefore challengeable by other actors in the network. See [Event Challenges](/proposals-classic#event-challenges)
 
 ##### Method Parameter Descriptions
 
