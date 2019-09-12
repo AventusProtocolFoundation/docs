@@ -25,4 +25,4 @@ To give an idea of how the Protocol could be used to run an event, see the lifec
 
 This flow would involve a wallet-like application for the ticketOwner to prove their key-pair and an eventOwner access control application to hold a doorlist of valid public keys and present an ownership challenge to the ticketOwners
 
-> Note: for more info on what is meant by some of these terms (eventOwner, ticketOwner, eventTime), see the [glossary](/glossary)
+> Note: for more info on what is meant by some of these terms (eventOwner, ticketOwner, eventTime), see the [glossary](/docs/glossary)
