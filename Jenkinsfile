@@ -16,7 +16,7 @@ pipeline {
         TOKEN = credentials('github-adrian-token-secret-text')
         GIT_USER = "${TOKEN}:x-oauth-basic"
         USE_SSH = 'false'
-        EMAIL = 'artos@artos.io'
+        EMAIL = 'aventus@aventus.io'
     }
 
     stages {

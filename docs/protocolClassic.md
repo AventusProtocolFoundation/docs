@@ -3,7 +3,7 @@ id: aventus-classic
 title: Guides
 ---
 
-Find below a high-level overview of the Classic protocol and how to interact with the smart contracts currently deployed on the Ethereum Testnet (Rinkeby).
+Find below a high-level overview of the Aventus Classic Protocol and how to interact with the smart contracts currently deployed on the Ethereum Testnet (Rinkeby).
 
 ## Contracts
 
@@ -11,12 +11,14 @@ _Rinkeby contract addresses placeholder_
 
 All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory.
 
-* IAventusStorage - the storage contract for all data in the Aventus Protocol
-* IAVTManager - the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol
-* IERC20 - the ERC20 interface: use this to access the AVT contract directly for approvals of protocol deposits
-* IEventsManager - event (create, delete, take off-sale, challenge, etc) and ticket (sell, resell, cancel, etc) management is all done here
-* IMembersManager - register or challenge addresses as Primary and Secondary members on the protocol
-* IProposalsManager - used for creating governance and community proposals; also used for voting on any proposals, including challenges
+- **IAventusStorage** the storage contract for all data in the Aventus Protocol
+- **IAVTManager** the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol
+- **IERC20** the ERC20 interface: use this to access the AVT contract directly for approvals of protocol deposits
+- **IEventsManager** event (create, delete, take off-sale, challenge, etc) and ticket (sell, resell, cancel, etc) management is all done here
+- **IMembersManager** register or challenge addresses as Primary and Secondary members on the protocol
+- **IProposalsManager** used for creating governance and community proposals; also used for voting on any proposals, including challenges
+
+See the interfaces in the code [here](https://github.com/AventusProtocolFoundation/protocol-classic/tree/master/contracts/interfaces)
 
 ## AVT Mechanics
 
