@@ -19,7 +19,7 @@ To give an idea of how the Protocol could be used to run an event, see the lifec
 
 1. eventOwner creates an event on the Protocol
 2. ticketOwner creates a private & public key-pair
-3. eventOwner sells tickets referencing ticketOwner's key-pair
+3. eventOwner sells tickets referencing ticketOwner's public key
 4. As the eventTime approaches the eventOwner compiles a list of ticketOwner public keys associated with the event from the public blockchain
 5. ticketOwners arrive at the event and prove ownership of their public key to the eventOwner to gain access
 

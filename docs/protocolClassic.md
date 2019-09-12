@@ -34,7 +34,7 @@ Every new event requires a deposit of 2000 AVT (1000 AVT if the event is free), 
 
 #### Member Deposit
 
-Members who wish to create events and tickets must first put up a deposit of 5000 AVT. If a member is voted to be fraudulent by the community, their member deposit will be shared amongst the voting community.
+Members who sell or resell tickets must first put up a deposit of 5000 AVT. If a member is voted to be fraudulent by the community, their member deposit will be shared amongst the voting community.
 
 ## Member Management
 
@@ -53,7 +53,7 @@ Register the given address and member type on the Aventus Protocol, only Primary
 |`memberAddress`| address | Address of the new member to be registered      |
 |`memberType` | string  | Stipulate if the member is to be registered as a Primary or Secondary |
 |`evidenceUrl`| string  | External URL to validate the legitimacy of the new member registration |
-|`desc`       | string  | A brief description of the member being registered, ie. company name |
+|`desc`       | string  | A brief description of the member being registered, eg. company name |
 
 #### Response: `LogMemberRegistered`
 
@@ -61,11 +61,11 @@ Register the given address and member type on the Aventus Protocol, only Primary
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`memberAddress`| address | Address of the new member to be registered      |
-|`memberType` | string  | Stipulate if the member is to be registered as a Primary or Secondary |
+|`memberAddress`| address | Address of the member that was registered      |
+|`memberType` | string  | Primary or Secondary |
 |`evidenceUrl`| string  | External URL to validate the legitimacy of the new member registration |
-|`desc`       | string  | A brief description of the member being registered, ie. company name |
-|`deposit`    | uint    | The amount of AVT required to create the event, expressed in attoavts |
+|`desc`       | string  | A brief description of the member being registered, eg. company name |
+|`deposit`    | uint    | The amount of AVT locked up, expressed in attoavts |
 
 #### Method: `getNewMemberDeposit`
 
@@ -79,7 +79,7 @@ Register the given address and member type on the Aventus Protocol, only Primary
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`memberDepositInAVT`| uint | The amount of AVT required to create the event, expressed in attoavts |
+|`memberDepositInAVT`| uint | The amount of AVT required to register the member, expressed in attoavts |
 
 ### Member Deregistration
 
@@ -108,8 +108,8 @@ Primary and Secondary can only be deregistered after a cooling off period since 
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`memberAddress`| address | Address of the new member to be registered      |
-|`memberType` | string  | Stipulate if the member is to be registered as a Primary or Secondary |
+|`memberAddress`| address | Address of the member to be deregistered      |
+|`memberType` | string  | Primary or Secondary |
 
 #### Response: `LogMemberDeregistered`
 
@@ -117,8 +117,8 @@ Primary and Secondary can only be deregistered after a cooling off period since 
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`memberAddress`| address | ✔ | Address of the new member to be registered |
-|`memberType`| string | ✘ | Stipulate if the member is to be registered as a Primary or Secondary |
+|`memberAddress`| address | ✔ | Address of the member that was deregistered |
+|`memberType`| string | ✘ | Primary or Secondary |
 
 ## Event Management
 
@@ -157,7 +157,7 @@ We refer to the user calling this endpoint as the _eventOwner_. Identity on Ethe
 |`onSaleTime`| uint | ✘ | When tickets go on sale: before this time is the "reporting period" so the event can be challenged before ticket sales start |
 |`offSaleTime`| uint | ✘ | The Epoch time that allows for no new tickets to be created or transfers of ownership after this time |
 |`averageTicketPriceInUSCents`| uint | ✘ | Used to calculate the event deposit, the higher the average ticket price, the higher the event deposit |
-|`depositInAVT`| uint | ✘ | The amount of AVT required to create the event |
+|`depositInAVT`| uint | ✘ | The amount of AVT locked when the event was created |
 
 ### Register Role on Event
 
@@ -175,7 +175,7 @@ As before with the `eventOwner` address, a new role must be registered with a pu
 | ----------- | ------- | ------------------------------------------------- |
 |`eventId`    | uint    | A unique identifier for the event on the Protocol |
 |`roleAddress`| address | The address of the role being registered          |
-|`role`       | string  | A case insensitive string representing a valid blockchain role (eg. primary, secondary) |
+|`role`       | string  | A case sensitive string representing a valid blockchain role (ie. Primary or Secondary) |
 
 #### Response: `LogEventRoleRegistered`
 
@@ -184,8 +184,8 @@ As before with the `eventOwner` address, a new role must be registered with a pu
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
 |`eventId`    | uint    | A unique identifier for the event on the Protocol |
-|`roleAddress`| address | The address of the role being registered          |
-|`role`       | string  | A case insensitive string representing a valid blockchain role (eg. primary, secondary) |
+|`roleAddress`| address | The address of the role that was registered |
+|`role`       | string  | A case sensitive string representing a valid blockchain role (ie. Primary or Secondary) |
 
 ### Get Event Time
 
@@ -333,7 +333,7 @@ Get the value of the AVT deposit that was paid for the given event; this must be
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`eventDeposit`| uint   | The amount of AVT been deposited for the specified event, expressed in attoavts |
+|`eventDeposit`| uint   | The amount of AVT deposited for the specified event, expressed in attoavts |
 
 ## Ticket Management
 
@@ -349,7 +349,7 @@ Uses a single ticket buyer private key for ownership and door access, can only b
 | ----------- | ------- | ------------------------------------------------- |
 |`eventId`    | uint    | A unique identifier for the event on the Protocol |
 |`vendorTicketRefHash`| bytes32  | Hash of the vendor (event owner or primary) generated unique ticket reference for the event |
-|`ticketMetadata`| string | Contextual, non-unique data associated with a ticket used by the wallets UI. includes but not exclusive to: event name, event time, venue location, etc |
+|`ticketMetadata`| string | Contextual, non-unique data associated with a ticket used by the wallets UI. Includes but not exclusive to: event name, event time, venue location, etc |
 |`buyer`      | address | Address of the ticket buyer |
 
 #### Response: `LogTicketSold`
@@ -361,7 +361,7 @@ Uses a single ticket buyer private key for ownership and door access, can only b
 |`eventId`| uint | ✔ | A unique identifier for the event on the Protocol |
 |`ticketId`| uint | ✔ | A unique identifier for the ticket on the Protocol |
 |`vendorTicketRefHash`| bytes32 | ✘ | Hash of the vendor (event owner or primary) generated unique ticket reference for the event |
-|`ticketMetadata`| string | ✘ | Contextual, non-unique data associated with a ticket used by the wallets UI. includes but not exclusive to: event name, event time, venue location, etc |
+|`ticketMetadata`| string | ✘ | Contextual, non-unique data associated with a ticket used by the wallets UI. Includes but not exclusive to: event name, event time, venue location, etc |
 |`buyer`| address | ✔ | Address of the ticket buyer |
 
 #### Method: `sellMultipleTickets`
