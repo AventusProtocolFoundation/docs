@@ -82,7 +82,7 @@
 <tr><td><code>votingStart</code></td><td>uint</td><td>✘</td><td>UNIX epoch timestamp for the start of the voting period</td></tr>
 <tr><td><code>revealingStart</code></td><td>uint</td><td>✘</td><td>UNIX epoch timestamp for the start of the vote revealing period</td></tr>
 <tr><td><code>revealingEnd</code></td><td>uint</td><td>✘</td><td>UNIX epoch timestamp for the end of the vote revealing period</td></tr>
-<tr><td><code>deposit</code></td><td>uint</td><td>✘</td><td>The deposit value in AVT for the new corporate governance proposal</td></tr>
+<tr><td><code>deposit</code></td><td>uint</td><td>✘</td><td>The deposit value in AVT for the new governance proposal</td></tr>
 <tr><td><code>bytecode</code></td><td>bytes</td><td>✘</td><td>The bytecode to be run if the proposal succeeds</td></tr>
 </tbody>
 </table>
@@ -262,7 +262,7 @@
 </thead>
 <tbody>
 <tr><td><code>memberAddress</code></td><td>address</td><td>Address of the member to be challenged</td></tr>
-<tr><td><code>memberType</code></td><td>string</td><td>Type of the member to be challenged</td></tr>
+<tr><td><code>memberType</code></td><td>string</td><td>Type of the member to be challenged, ie Primary or Secondary</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="response-logmemberchallenged"></a><a href="#response-logmemberchallenged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response: <code>LogMemberChallenged</code></h4>
@@ -272,8 +272,8 @@
 <tr><th>Parameter</th><th>Type</th><th>Indexed</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>memberAddress</code></td><td>address</td><td>✔</td><td>Address of the member been challenged</td></tr>
-<tr><td><code>memberType</code></td><td>string</td><td>✘</td><td>Type of the member been challenged, either Primary or Secondary</td></tr>
+<tr><td><code>memberAddress</code></td><td>address</td><td>✔</td><td>Address of the member being challenged</td></tr>
+<tr><td><code>memberType</code></td><td>string</td><td>✘</td><td>Type of the member being challenged, ie Primary or Secondary</td></tr>
 <tr><td><code>proposalId</code></td><td>uint</td><td>✔</td><td>A unique identifier for the challenge on the Protocol</td></tr>
 <tr><td><code>lobbyingStart</code></td><td>uint</td><td>✘</td><td>UNIX epoch timestamp for the start of the vote lobbying period</td></tr>
 <tr><td><code>votingStart</code></td><td>uint</td><td>✘</td><td>UNIX epoch timestamp for the start of the voting period</td></tr>
@@ -289,8 +289,8 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>memberAddress</code></td><td>address</td><td>Address of the member to stop being challenged</td></tr>
-<tr><td><code>memberType</code></td><td>string</td><td>Type of the member to stop being challenged, either Primary or Secondary</td></tr>
+<tr><td><code>memberAddress</code></td><td>address</td><td>Address of the member for which the challenge should end</td></tr>
+<tr><td><code>memberType</code></td><td>string</td><td>Type of the member, ie Primary or Secondary</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="response-logmemberchallengeended"></a><a href="#response-logmemberchallengeended" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response: <code>LogMemberChallengeEnded</code></h4>
@@ -300,8 +300,8 @@
 <tr><th>Parameter</th><th>Type</th><th>Indexed</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>memberAddress</code></td><td>address</td><td>✔</td><td>Address of the member been ended the challenge</td></tr>
-<tr><td><code>memberType</code></td><td>string</td><td>✘</td><td>Type of the member been ended the challenge, either Primary or Secondary</td></tr>
+<tr><td><code>memberAddress</code></td><td>address</td><td>✔</td><td>Address of the member for which the challenge has ended</td></tr>
+<tr><td><code>memberType</code></td><td>string</td><td>✘</td><td>Type of the member, ie Primary or Secondary</td></tr>
 <tr><td><code>proposalId</code></td><td>uint</td><td>✔</td><td>A unique identifier for the challenge on the Protocol</td></tr>
 <tr><td><code>votesFor</code></td><td>uint</td><td>✘</td><td>Total number of votes <em>for</em> a challenge</td></tr>
 <tr><td><code>votesAgainst</code></td><td>uint</td><td>✘</td><td>Total number of votes <em>against</em> a challenge</td></tr>
@@ -316,7 +316,7 @@
 </thead>
 <tbody>
 <tr><td><code>memberAddress</code></td><td>address</td><td>Address of the member to be checked</td></tr>
-<tr><td><code>memberType</code></td><td>string</td><td>Type of the member to be checked, either Primary or Secondary</td></tr>
+<tr><td><code>memberType</code></td><td>string</td><td>Type of the member to be checked, ie Primary or Secondary</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="response-2"></a><a href="#response-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h4>
@@ -338,7 +338,7 @@
 </thead>
 <tbody>
 <tr><td><code>memberAddress</code></td><td>address</td><td>Address of the member</td></tr>
-<tr><td><code>memberType</code></td><td>string</td><td>Type of the member, either Primary or Secondary</td></tr>
+<tr><td><code>memberType</code></td><td>string</td><td>Type of the member, ie Primary or Secondary</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="response-3"></a><a href="#response-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response</h4>
@@ -347,7 +347,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Indexed</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>memberDepositInAVT</code></td><td>uint</td><td>✘</td><td>The amount of AVT been deposited to events by the member, expressed in attoavts</td></tr>
+<tr><td><code>memberDepositInAVT</code></td><td>uint</td><td>✘</td><td>The amount of AVT that has been deposited by the member, expressed in attoavts</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="voting"></a><a href="#voting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voting</h2>
@@ -409,7 +409,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>votingRevealEndTime</code></td><td>uint</td><td>UNIX epoch timestamp for the revealing period ends; zero if no matching proposalId.</td></tr>
+<tr><td><code>votingRevealEndTime</code></td><td>uint</td><td>UNIX epoch timestamp for when the revealing period ends; zero if no matching proposalId.</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="method-castvote"></a><a href="#method-castvote" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Method: <code>castVote</code></h4>
@@ -424,7 +424,7 @@
 </thead>
 <tbody>
 <tr><td><code>proposalId</code></td><td>uint</td><td>A unique identifier for the challenge on the Protocol</td></tr>
-<tr><td><code>secret</code></td><td>bytes32</td><td>The secret vote: Sha3(signed Sha3(option ID))</td></tr>
+<tr><td><code>secret</code></td><td>bytes32</td><td>The secret vote: hashed(signedSecret) where signedSecret is signed(hashed((proposalId * 10) + option ID)))</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="response-logvotecast"></a><a href="#response-logvotecast" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response: <code>LogVoteCast</code></h4>
@@ -475,7 +475,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><code>signedMessage</code></td><td>bytes</td><td>A signed message</td></tr>
+<tr><td><code>signedMessage</code></td><td>bytes</td><td>The signed secret: signed(hashed((proposalId * 10) + optionId))</td></tr>
 <tr><td><code>proposalId</code></td><td>uint</td><td>A unique identifier for the challenge on the Protocol</td></tr>
 <tr><td><code>optId</code></td><td>uint</td><td>ID of option that was voted on</td></tr>
 </tbody>
