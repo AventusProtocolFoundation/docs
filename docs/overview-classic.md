@@ -3,7 +3,7 @@ id: overview-classic
 title: Overview
 ---
 
-Aventus is an open-source, decentralised protocol that revolutionises the way digital assets are issued, owned, and transferred across supply chains.
+Aventus Classic is an open-source, decentralised protocol that revolutionises the way digital assets are issued, owned, and transferred across supply chains.
 
 As envisaged in the original [Aventus white paper A Blockchain-Based Event Ticketing Protocol (2017)](https://icosbull.com/whitepapers/1276/Aventus_whitepaper.pdf), Aventus Classic is an Ethereum-based ticketing protocol designed to alleviate fraud and touting in the long tail of the event ticketing industry.
 
