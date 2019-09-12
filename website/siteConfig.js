@@ -14,7 +14,7 @@
 //     caption: 'User1',
 //     // You will need to prepend the image path with your baseUrl
 //     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-//     image: '/img/artos.png',
+//     image: '/img/aventus.png',
 //     infoLink: 'https://www.facebook.com',
 //     pinned: true,
 //   },
@@ -24,13 +24,13 @@ const siteConfig = {
   title: 'Aventus Protocol', // Title for your website.
   tagline: 'Open blockchain ticketing standard',
   url: 'https://github.com/AventusProtocolFoundation', // Your website URL
-  baseUrl: '/aventus-docs/', // Base URL for your project */
+  baseUrl: '/docs/', // Base URL for your project */
 
   docsUrl: '',
 
   // Used for publishing and more
-  projectName: 'aventus-docs',
-  organizationName: 'ArtosSystems',
+  projectName: 'docs',
+  organizationName: 'AventusProtocolFoundation',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
