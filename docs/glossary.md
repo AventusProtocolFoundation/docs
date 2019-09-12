@@ -17,7 +17,6 @@ title: Glossary
 - **Ticket** A permission that indicates that an individual is entitled to admission to an _event_ tied to an address in a _Ticket Wallet_. A _ticketOwner_ typically pays for a ticket, but our ecosystem is focussed on ticket delivery & handling, so payment considerations are dealt with externally. Ticket's have built-in properties including additional details for that ticket, typically including fields like: grouping (ie. VIP, Earlybird), gate number, row / seat number, etc.
 - **ticketId** A unique identifier for the _ticket_ on the _Protocol_, see [IDs](glossary#ids) for more info
 - **ticketOwner** The bearer of a _ticket_, see [Roles](glossary#roles) for more info
-- **Ticket Wallet** is a mobile application that ingests and displays _tickets_. We've built some reference Ticket Wallet applications using our [Ticket Wallet SDKs](/docs/ticket-wallet) that are compatible with Aventus _tickets_.
 - **Resale** Within the Aventus ecosystem a _ticket_ owned by a _ticketOwner_ can be resold to another _Ticket Wallet_, updating the ownership associated with that _ticket_ on the blockchain
 - **Cancel** Another action that can be taken on a _ticket_ is a cancellation, meaning that the _ticketOwner_ will no longer be represented on the _doorlist_ so they cannot attend the _event_
 

@@ -9,7 +9,7 @@ Find below a high-level overview of the Aventus Classic Protocol and how to inte
 
 _Rinkeby contract addresses placeholder_
 
-All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory.
+All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory:
 
 - **IAventusStorage** the storage contract for all data in the Aventus Protocol
 - **IAVTManager** the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol
@@ -18,15 +18,15 @@ All our contracts are accessed via interfaces, as defined in the contracts/inter
 - **IMembersManager** register or challenge addresses as Primary and Secondary members on the protocol
 - **IProposalsManager** used for creating governance and community proposals; also used for voting on any proposals, including challenges
 
-See the interfaces in the code [here](https://github.com/AventusProtocolFoundation/protocol-classic/tree/master/contracts/interfaces)
+See the interfaces directly in the code [here](https://github.com/AventusProtocolFoundation/protocol-classic/tree/master/contracts/interfaces) for more infomation.
 
 ## AVT Mechanics
 
-Certain interactions with the Aventus Protocol require a deposit using the Protocol's token [AVT](https://etherscan.io/token/0x0d88ed6e74bbfd96b831231638b66c05571e824f) in order to penalise improper behaviour within the network
+Certain interactions with the Aventus Protocol require a deposit using the Protocol's token [AVT](https://etherscan.io/token/0x0d88ed6e74bbfd96b831231638b66c05571e824f) in order to penalise improper behaviour within the network.
 
-As the Protocol is currently deployed to Rinkeby we've introduced an AVT Faucet (similar to Ethereum's faucet) to release testnet AVTs for use with the Protocol
+As the Protocol is currently deployed to Rinkeby we've introduced an AVT Faucet (similar to Ethereum's faucet) to release testnet AVTs for use with the Protocol.
 
-This can be accessed via the AVTFaucet contract deployed on Rinkeby [here](TODO)
+This can be accessed via the AVTFaucet contract deployed on Rinkeby [here](TODO).
 
 #### Event Deposit
 
