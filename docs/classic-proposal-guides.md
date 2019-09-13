@@ -26,9 +26,9 @@ Create a governance proposal to be voted on
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the new governance proposal been created |
-|`sender`| address | ✔ | Address of the governance proposal sender |
-|`desc`| string | ✘ | Either just a title or a pointer to IPFS details |
+|`proposalId` | uint | ✔ | A unique identifier for the new governance proposal been created |
+|`sender`     | address | ✔ | Address of the governance proposal sender |
+|`desc`       | string | ✘ | Either just a title or a pointer to IPFS details |
 |`lobbyingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote lobbying period |
 |`votingStart`| uint | ✘ | UNIX epoch timestamp for the start of the voting period |
 |`revealingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote revealing period |
@@ -54,8 +54,8 @@ End the governance proposal: will unlock the deposit.
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the governance proposal |
-|`votesFor`| uint | ✘ | Total number of votes *for* the governance proposal |
+|`proposalId` | uint | ✔ | A unique identifier for the governance proposal |
+|`votesFor`   | uint | ✘ | Total number of votes *for* the governance proposal |
 |`votesAgainst`| uint | ✘ | Total number of votes *against* the governance proposal |
 |`implemented`| bool | ✘ | Returns true if the bytecode assigned to the governance proposal has been run successfully, otherwise returns false |
 
@@ -93,9 +93,9 @@ Create a community proposal to be voted on
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the new community proposal been created |
-|`sender`| address | ✔ | Address of the community proposal sender |
-|`desc`| string | ✘ | Description of the proposal, preferably with a URL for further details |
+|`proposalId` | uint | ✔ | A unique identifier for the new community proposal been created |
+|`sender`     | address | ✔ | Address of the community proposal sender |
+|`desc`       | string | ✘ | Description of the proposal, preferably with a URL for further details |
 |`lobbyingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote lobbying period |
 |`votingStart`| uint | ✘ | UNIX epoch timestamp for the start of the voting period |
 |`revealingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote revealing period |
@@ -112,7 +112,7 @@ End the community proposal: will unlock the deposit.
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | A unique identifier for the community proposal to be ended |
+|`proposalId` | uint | A unique identifier for the community proposal to be ended |
 
 #### Response: `LogCommunityProposalCreated`
 
@@ -120,8 +120,8 @@ End the community proposal: will unlock the deposit.
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the proposal to be ended |
-|`votesFor`| uint | ✘ | Total number of votes *for* the community proposal |
+|`proposalId` | uint | ✔ | A unique identifier for the proposal to be ended |
+|`votesFor`   | uint | ✘ | Total number of votes *for* the community proposal |
 |`votesAgainst`| uint | ✘ | Total number of votes *against* the community proposal |
 
 #### Method: `getCommunityProposalDeposit`
@@ -239,7 +239,7 @@ Ends a challenge on the specified member
 |`memberAddress`| address |	✔ |	Address of the member for which the challenge has ended |
 |`memberType` | string  | ✘ | Type of the member, ie Primary or Secondary |
 |`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
-|`votesFor`| uint | ✘ | Total number of votes *for* a challenge |
+|`votesFor`  | uint | ✘ | Total number of votes *for* a challenge |
 |`votesAgainst`| uint | ✘ | Total number of votes *against* a challenge |
 
 #### Method: `memberIsActive`
@@ -257,7 +257,7 @@ Check if the given member is allowed to use the Aventus Protocol or not.
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`isActive`| bool | ✘ | Returns true if the given member is registered AND not fraudulent, otherwise returns false
+|`isActive`   | bool    | ✘ | Returns true if the given member is registered AND not fraudulent, otherwise returns false
  |
 
 #### Method: `getExistingMemberDeposit`
@@ -289,7 +289,7 @@ Get the starting time of a vote
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | A unique identifier for the challenge on the Protocol |
+|`proposalId` | uint | A unique identifier for the challenge on the Protocol |
 
 #### Response
 
@@ -305,7 +305,7 @@ Get the ending time of a vote / start of the vote's reveal period
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | A unique identifier for the challenge on the Protocol |
+|`proposalId` | uint | A unique identifier for the challenge on the Protocol |
 
 #### Response
 
@@ -321,7 +321,7 @@ Get the ending time of a vote's revealing period
 
 | Parameter   | Type    | Description                                       |
 | ----------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | A unique identifier for the challenge on the Protocol |
+|`proposalId` | uint | A unique identifier for the challenge on the Protocol |
 
 #### Response
 
@@ -348,9 +348,9 @@ Cast a vote on one of a given proposal's options
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
-|`sender`| address | ✔ | Address of the proposal sender |
-|`secret`| bytes32 | ✘ | The secret vote: Sha3(signed Sha3(option ID)) |
+|`proposalId` | uint    | ✔ | A unique identifier for the challenge on the Protocol |
+|`sender`     | address | ✔ | Address of the proposal sender |
+|`secret`     | bytes32 | ✘ | The secret vote: Sha3(signed Sha3(option ID)) |
 
 #### Method: `cancelVote`
 
@@ -370,8 +370,8 @@ Cancel a vote on one of a given proposal's options
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
-|`sender`| address | ✔ | Address of the proposal sender |
+|`proposalId` | uint    | ✔ | A unique identifier for the challenge on the Protocol |
+|`sender`     | address | ✔ | Address of the proposal sender |
 
 #### Method: `revealVote`
 
@@ -385,7 +385,7 @@ Reveal a vote on a proposal
 | ----------- | ------- | ------------------------------------------------- |
 |`signedMessage` | bytes | The signed secret: signed(hashed((proposalId * 10) + optionId)) |
 |`proposalId` | uint | A unique identifier for the challenge on the Protocol |
-|`optId` | uint | ID of option that was voted on |
+|`optId`     | uint | ID of option that was voted on |
 
 #### Response: `LogVoteRevealed`
 
@@ -393,11 +393,11 @@ Reveal a vote on a proposal
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
-|`sender`| address | ✔ | Address of the proposal sender |
-|`optId`| uint | ✔ | ID of option that was voted on |
+|`proposalId` | uint    | ✔ | A unique identifier for the challenge on the Protocol |
+|`sender`     | address | ✔ | Address of the proposal sender |
+|`optId`      | uint    | ✔ | ID of option that was voted on |
 |`revealingStart`| uint | ✘ | UNIX epoch timestamp for the start of the vote revealing period |
-|`revealingEnd`| uint | ✘ | UNIX epoch timestamp for the end of the vote revealing period |
+|`revealingEnd`| uint   | ✘ | UNIX epoch timestamp for the end of the vote revealing period |
 
 #### Method: `claimVoterWinnings`
 
@@ -415,22 +415,4 @@ Claim winnings from a proposal if caller voted on the winning side. Results in t
 
 | Parameter   | Type    | Indexed | Description                                       |
 | ----------- | ------- | ------- | ------------------------------------------------- |
-|`proposalId`| uint | ✔ | A unique identifier for the challenge on the Protocol |
-
-## General
-
-We also have some general helper methods that may be useful while interacting with the Protocol
-
-#### Method: `getAventusTime`
-
-Timestamp of the current time on the main net or the mock time on a test network
-
-##### Method Parameter Descriptions
-
-None
-
-#### Response
-
-| Parameter | Type | Description |
-| --------- | ---- | ------------------------------------------------- |
-|`time`     | uint | The current time on the main net or the mock time on a test network |
+|`proposalId` | uint    | ✔       | A unique identifier for the challenge on the Protocol |
