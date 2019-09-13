@@ -35,7 +35,7 @@ Certain interactions with the Aventus Protocol require a deposit using the Proto
 
 As the Protocol is currently deployed to Rinkeby we've introduced an AVT Faucet (similar to Ethereum's faucet) to release testnet AVTs for use with the Protocol.
 
-This can be accessed via the AVTFaucet contract deployed on Rinkeby - see above.
+This can be accessed via the AVT Faucet contract deployed on Rinkeby, see the [Tools section](/docs/classic-tools#avt-faucet) for information on how to use the faucet.
 
 ### Event Deposit
 
