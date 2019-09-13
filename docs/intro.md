@@ -7,6 +7,6 @@ This guide acts as developer reference for the Aventus Protocol which is an open
 
 We do treat this documentation as a developer resource so some complexities remain particularly related to Solidity. Therefore, any language and instructional information included assumes an existing technical knowledge of interacting with Ethereum and the typical practices involved.
 
-![](https://github.com/AventusProtocolFoundation/docs/blob/master/resources/aventus-header.jpeg)
+![](https://raw.githubusercontent.com/AventusProtocolFoundation/docs/master/resources/aventus-header.jpeg)
 
 Please visit the [aventus.io](https://aventus.io/) website to learn more about the Protocol and how it can be used for management of events and tickets. To get started with the code, click the button below.
