@@ -1,0 +1,17 @@
+{
+  "version-1.2-docs": {
+    "Aventus": [
+      "version-1.2-intro"
+    ],
+    "Aventus Classic": [
+      "version-1.2-overview-classic",
+      "version-1.2-classic-contracts",
+      "version-1.2-aventus-classic",
+      "version-1.2-proposals-classic",
+      "version-1.2-glossary"
+    ],
+    "Resources": [
+      "version-1.2-glossary"
+    ]
+  }
+}
