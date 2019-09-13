@@ -1,6 +1,6 @@
 ---
 id: classic-tools
-title: Contracts
+title: Tools
 ---
 
 We also have some general helper methods that may be useful while interacting with the Protocol
