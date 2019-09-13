@@ -1,6 +1,6 @@
 ---
 id: proposals-classic
-title: Proposals
+title: Proposal Guides
 ---
 
 Find below an overview of the governance and challenge functionality of the Aventus Classic Protocol, see the [Contracts](/docs/classic-contracts) page for the detailed locations showing where to reference these methods.

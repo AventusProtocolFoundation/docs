@@ -1,6 +1,6 @@
 ---
 id: classic-contracts
-title: Smart Contracts
+title: Contracts
 ---
 
 The Protocol is deployed in the form of [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on Ethereum (Rinkeby testnet). The exact location of each contract can be found below:

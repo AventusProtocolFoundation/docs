@@ -1,6 +1,6 @@
 ---
 id: aventus-classic
-title: Guides
+title: Ticket Guides
 ---
 
 Find below an overview of the ticketing functionality of the Aventus Classic Protocol, see the [Contracts](/docs/classic-contracts) page for the detailed locations showing where to reference these methods.
