@@ -1,5 +1,5 @@
 ---
-id: classic-contracts
+id: classic-tools
 title: Contracts
 ---
 

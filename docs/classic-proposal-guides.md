@@ -1,5 +1,5 @@
 ---
-id: proposals-classic
+id: classic-proposal-guides
 title: Proposal Guides
 ---
 

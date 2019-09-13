@@ -1,5 +1,5 @@
 ---
-id: glossary
+id: classic-glossary
 title: Glossary
 ---
 

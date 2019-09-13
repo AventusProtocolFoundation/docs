@@ -1,7 +1,7 @@
 {
   "docs": {
     "Aventus": ["intro"],
-    "Aventus Classic": ["overview-classic", "classic-contracts", "aventus-classic", "proposals-classic", "glossary"],
-    "Resources": ["tools", "glossary"]
+    "Aventus Classic": ["classic-overview", "classic-contracts", "classic-ticket-guides", "classic-proposal-guides"],
+    "Resources": ["classic-tools", "classic-glossary"]
   }
 }

@@ -1,5 +1,5 @@
 ---
-id: aventus-classic
+id: classic-ticket-guides
 title: Ticket Guides
 ---
 

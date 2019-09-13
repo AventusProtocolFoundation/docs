@@ -1,5 +1,5 @@
 ---
-id: overview-classic
+id: classic-overview
 title: Overview
 ---
 
