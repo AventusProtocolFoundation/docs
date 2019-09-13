@@ -3,6 +3,8 @@ id: proposals-classic
 title: Proposals
 ---
 
+Find below an overview of the governance and challenge functionality of the Aventus Classic Protocol, see the [Contracts](/docs/classic-contracts) page for the detailed locations showing where to reference these methods.
+
 ## Governance
 
 Governance refers to the mechanisms by which decentralised networks adapt and change over time. AVT holders have a stake in the network and as such can propose to adapt the way the code runs by initiating a governance proposal. Other AVT holders can then vote on the proposal to determine wether the network agrees or disagrees with the change.

@@ -3,46 +3,7 @@ id: aventus-classic
 title: Guides
 ---
 
-Find below a high-level overview of the Aventus Classic Protocol and how to interact with the smart contracts currently deployed on the Ethereum Testnet (Rinkeby).
-
-## Contracts
-
-Rinkeby contract addresses:
-
-- **AventusStorage** [0x929d67079aA9786C45e1454B25d4Fa7957b1B208](https://rinkeby.etherscan.io/address/0x929d67079aA9786C45e1454B25d4Fa7957b1B208)
-- **AVT** [0x624CAb4a84b5172D39D320B7AE7191B1458ADdf4](https://rinkeby.etherscan.io/address/0x624CAb4a84b5172D39D320B7AE7191B1458ADdf4)
-- **AVTFaucet** [0x3D125E619955623d463Cf1a62A316356bB3b1C2D](https://rinkeby.etherscan.io/address/0x3D125E619955623d463Cf1a62A316356bB3b1C2D)
-- **AVTManager** [0xC0Cf68c40c1BD1f4EDDfac4648Fa772A21Ee0030](https://rinkeby.etherscan.io/address/0xC0Cf68c40c1BD1f4EDDfac4648Fa772A21Ee0030)
-- **EventsManager** [0x3Ea603A3B80b621e3253dc3b3D80db9B5799AdA8](https://rinkeby.etherscan.io/address/0x3Ea603A3B80b621e3253dc3b3D80db9B5799AdA8)
-- **MembersManager** [0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647](https://rinkeby.etherscan.io/address/0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647)
-- **ProposalsManager** [0xE4F3A588140ec425aF307C7aED873188a9b9534e](https://rinkeby.etherscan.io/address/0xE4F3A588140ec425aF307C7aED873188a9b9534e)
-
-All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory:
-
-- **IAventusStorage** the storage contract for all data in the Aventus Protocol
-- **IAVTManager** the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol
-- **IERC20** the ERC20 interface: use this to access the AVT contract directly for approvals of protocol deposits
-- **IEventsManager** event (create, delete, take off-sale, challenge, etc) and ticket (sell, resell, cancel, etc) management is all done here
-- **IMembersManager** register or challenge addresses as Primary and Secondary members on the protocol
-- **IProposalsManager** used for creating governance and community proposals; also used for voting on any proposals, including challenges
-
-See the interfaces directly in the code [here](https://github.com/AventusProtocolFoundation/protocol-classic/tree/master/contracts/interfaces) for more infomation.
-
-## AVT Mechanics
-
-Certain interactions with the Aventus Protocol require a deposit using the Protocol's token [AVT](https://etherscan.io/token/0x0d88ed6e74bbfd96b831231638b66c05571e824f) in order to penalise improper behaviour within the network.
-
-As the Protocol is currently deployed to Rinkeby we've introduced an AVT Faucet (similar to Ethereum's faucet) to release testnet AVTs for use with the Protocol.
-
-This can be accessed via the AVTFaucet contract deployed on Rinkeby - see above.
-
-#### Event Deposit
-
-Every new event requires a deposit of 2000 AVT (1000 AVT if the event is free), which is returned to the owner once the `eventTime` has passed. If an event is voted to be fraudulent by the community, the event deposit will be shared amongst the voting community.
-
-#### Member Deposit
-
-Members who sell or resell tickets must first put up a deposit of 5000 AVT. If a member is voted to be fraudulent by the community, their member deposit will be shared amongst the voting community.
+Find below an overview of the ticketing functionality of the Aventus Classic Protocol, see the [Contracts](/docs/classic-contracts) page for the detailed locations showing where to reference these methods.
 
 ## Member Management
 

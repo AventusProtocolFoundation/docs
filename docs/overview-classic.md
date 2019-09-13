@@ -26,3 +26,19 @@ To give an idea of how the Protocol could be used to run an event, see the lifec
 This flow would involve a wallet-like application for the ticketOwner to prove their key-pair and an eventOwner access control application to hold a doorlist of valid public keys and present an ownership challenge to the ticketOwners
 
 > Note: for more info on what is meant by some of these terms (eventOwner, ticketOwner, eventTime), see the [glossary](/docs/glossary)
+
+## AVT Mechanics
+
+Certain interactions with the Aventus Protocol require a deposit using the Protocol's token [AVT](https://etherscan.io/token/0x0d88ed6e74bbfd96b831231638b66c05571e824f) in order to penalise improper behaviour within the network.
+
+As the Protocol is currently deployed to Rinkeby we've introduced an AVT Faucet (similar to Ethereum's faucet) to release testnet AVTs for use with the Protocol.
+
+This can be accessed via the AVTFaucet contract deployed on Rinkeby - see above.
+
+### Event Deposit
+
+Every new event requires a deposit of 2000 AVT (1000 AVT if the event is free), which is returned to the owner once the `eventTime` has passed. If an event is voted to be fraudulent by the community, the event deposit will be shared amongst the voting community.
+
+### Member Deposit
+
+Members who sell or resell tickets must first put up a deposit of 5000 AVT. If a member is voted to be fraudulent by the community, their member deposit will be shared amongst the voting community.
