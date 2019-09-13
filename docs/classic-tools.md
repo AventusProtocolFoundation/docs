@@ -5,15 +5,13 @@ title: Tools
 
 We also have some general helper methods that may be useful while interacting with the Protocol
 
-## Tools
+## Blockchain Time
 
-### Blockchain Time
-
-#### Method: `getAventusTime`
+### Method: `getAventusTime`
 
 Timestamp of the current time on the main net or the mock time on a test network
 
-##### Method Parameter Descriptions
+#### Method Parameter Descriptions
 
 None
 
@@ -23,6 +21,6 @@ None
 | --------- | ---- | ------------------------------------------------- |
 |`time`     | uint | The current time on the main net or the mock time on a test network |
 
-### AVT Faucet
+## AVT Faucet
 
-#### Method: `drip`
+### Method: `drip`
