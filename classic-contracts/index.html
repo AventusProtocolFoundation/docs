@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Contracts · Aventus Protocol</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Protocol is deployed in the form of [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on Ethereum (Rinkeby testnet). The exact location of each contract can be found below:"/><meta name="docsearch:version" content="1.2"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Contracts · Aventus Protocol"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AventusProtocolFoundation/docs/"/><meta property="og:description" content="The Protocol is deployed in the form of [Smart Contracts](https://en.wikipedia.org/wiki/Smart_contract) on Ethereum (Rinkeby testnet). The exact location of each contract can be found below:"/><meta property="og:image" content="https://github.com/AventusProtocolFoundation/docs/img/aventus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/AventusProtocolFoundation/docs/img/aventus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/AventusLogoStandaloneWhite.png" alt="Aventus Protocol"/><h2 class="headerTitleWithLogo">Aventus Protocol</h2></a><a href="/docs/versions"><h3>1.2</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://github.com/AventusProtocolFoundation" target="_self">GitHub</a></li><li class=""><a href="https://github.com/AventusProtocolFoundation/docs/blob/master/resources/Aventus%20Classic%20Whitepaper.pdf" target="_self">Whitepaper</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Aventus Classic</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Aventus</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Aventus Classic</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/overview-classic">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/classic-contracts">Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/aventus-classic">Ticket Guides</a></li><li class="navListItem"><a class="navItem" href="/docs/proposals-classic">Proposal Guides</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Contracts</h1></header><article><div><span><p>The Protocol is deployed in the form of <a href="https://en.wikipedia.org/wiki/Smart_contract">Smart Contracts</a> on Ethereum (Rinkeby testnet). The exact location of each contract can be found below:</p>
+<h2><a class="anchor" aria-hidden="true" id="contracts"></a><a href="#contracts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contracts</h2>
+<p>Rinkeby contract addresses:</p>
+<ul>
+<li><strong>AventusStorage</strong> <a href="https://rinkeby.etherscan.io/address/0x929d67079aA9786C45e1454B25d4Fa7957b1B208">0x929d67079aA9786C45e1454B25d4Fa7957b1B208</a></li>
+<li><strong>AVT</strong> <a href="https://rinkeby.etherscan.io/address/0x624CAb4a84b5172D39D320B7AE7191B1458ADdf4">0x624CAb4a84b5172D39D320B7AE7191B1458ADdf4</a></li>
+<li><strong>AVTFaucet</strong> <a href="https://rinkeby.etherscan.io/address/0x3D125E619955623d463Cf1a62A316356bB3b1C2D">0x3D125E619955623d463Cf1a62A316356bB3b1C2D</a></li>
+<li><strong>AVTManager</strong> <a href="https://rinkeby.etherscan.io/address/0xC0Cf68c40c1BD1f4EDDfac4648Fa772A21Ee0030">0xC0Cf68c40c1BD1f4EDDfac4648Fa772A21Ee0030</a></li>
+<li><strong>EventsManager</strong> <a href="https://rinkeby.etherscan.io/address/0x3Ea603A3B80b621e3253dc3b3D80db9B5799AdA8">0x3Ea603A3B80b621e3253dc3b3D80db9B5799AdA8</a></li>
+<li><strong>MembersManager</strong> <a href="https://rinkeby.etherscan.io/address/0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647">0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647</a></li>
+<li><strong>ProposalsManager</strong> <a href="https://rinkeby.etherscan.io/address/0xE4F3A588140ec425aF307C7aED873188a9b9534e">0xE4F3A588140ec425aF307C7aED873188a9b9534e</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="interfaces"></a><a href="#interfaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interfaces</h2>
+<p>All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory:</p>
+<ul>
+<li><strong>IAventusStorage</strong> the storage contract for all data in the Aventus Protocol</li>
+<li><strong>IAVTManager</strong> the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol</li>
+<li><strong>IERC20</strong> the ERC20 interface: use this to access the AVT contract directly for approvals of protocol deposits</li>
+<li><strong>IEventsManager</strong> event (create, delete, take off-sale, challenge, etc) and ticket (sell, resell, cancel, etc) management is all done here</li>
+<li><strong>IMembersManager</strong> register or challenge addresses as Primary and Secondary members on the protocol</li>
+<li><strong>IProposalsManager</strong> used for creating governance and community proposals; also used for voting on any proposals, including challenges</li>
+</ul>
+<p>See the interfaces directly in the code <a href="https://github.com/AventusProtocolFoundation/protocol-classic/tree/master/contracts/interfaces">here</a> for more infomation.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/overview-classic"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/aventus-classic"><span>Ticket Guides</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#contracts">Contracts</a></li><li><a href="#interfaces">Interfaces</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/AventusLogoStandaloneSquareWhite.png" alt="Aventus Protocol" width="66" height="58"/></a><div><h5>Company</h5><a href="https://aventus.io/" target="_blank" rel="noreferrer noopener">Aventus</a><a href="https://aventus.io/privacy-policy/">Privacy Policy</a><a href="https://aventus.io/tc/">T&amp;C</a><a href="https://blog.aventus.io/" target="_blank" rel="noreferrer noopener">Blog</a></div><div><h5>More</h5><a href="https://github.com/AventusProtocolFoundation" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://www.facebook.com/AventusNetwork/" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://twitter.com/AventusNetwork" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.linkedin.com/company/aventusnetwork/" target="_blank" rel="noreferrer noopener">LinkedIn</a></div></section><section class="copyright">Copyright © 2019 Aventus Protocol Foundation</section></footer></div></body></html>
