@@ -1,0 +1,17 @@
+{
+  "version-1.3-docs": {
+    "Aventus": [
+      "version-1.3-intro"
+    ],
+    "Aventus Classic": [
+      "version-1.3-classic-overview",
+      "version-1.3-classic-contracts",
+      "version-1.3-classic-ticket-guides",
+      "version-1.3-classic-proposal-guides"
+    ],
+    "Resources": [
+      "version-1.3-classic-tools",
+      "version-1.3-classic-glossary"
+    ]
+  }
+}
