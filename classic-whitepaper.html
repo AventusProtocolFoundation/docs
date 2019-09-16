@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Whitepaper · Aventus Protocol</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="As envisaged in the original [Aventus whitepaper A Blockchain-Based Event Ticketing Protocol (2017)](https://icosbull.com/whitepapers/1276/Aventus_whitepaper.pdf), Aventus Classic is an Ethereum-based ticketing protocol designed to alleviate fraud and touting in the long tail of the event ticketing industry."/><meta name="docsearch:version" content="1.4"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Whitepaper · Aventus Protocol"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AventusProtocolFoundation/docs/"/><meta property="og:description" content="As envisaged in the original [Aventus whitepaper A Blockchain-Based Event Ticketing Protocol (2017)](https://icosbull.com/whitepapers/1276/Aventus_whitepaper.pdf), Aventus Classic is an Ethereum-based ticketing protocol designed to alleviate fraud and touting in the long tail of the event ticketing industry."/><meta property="og:image" content="https://github.com/AventusProtocolFoundation/docs/img/aventus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/AventusProtocolFoundation/docs/img/aventus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/AventusLogoStandaloneWhite.png" alt="Aventus Protocol"/><h2 class="headerTitleWithLogo">Aventus Protocol</h2></a><a href="/docs/versions"><h3>1.4</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://github.com/AventusProtocolFoundation" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Aventus Classic</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Aventus</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Aventus Classic</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/classic-whitepaper">Whitepaper</a></li><li class="navListItem"><a class="navItem" href="/docs/classic-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/classic-contracts">Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/classic-ticket-guides">Ticket Guides</a></li><li class="navListItem"><a class="navItem" href="/docs/classic-proposal-guides">Proposal Guides</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/classic-tools">Tools</a></li><li class="navListItem"><a class="navItem" href="/docs/classic-glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Whitepaper</h1></header><article><div><span><p>As envisaged in the original <a href="https://icosbull.com/whitepapers/1276/Aventus_whitepaper.pdf">Aventus whitepaper A Blockchain-Based Event Ticketing Protocol (2017)</a>, Aventus Classic is an Ethereum-based ticketing protocol designed to alleviate fraud and touting in the long tail of the event ticketing industry.</p>
+<p>For more information; including a history of the design decisions taken here, see the updated <strong><a href="https://github.com/AventusProtocolFoundation/docs/blob/master/resources/Aventus%20Classic%20Whitepaper.pdf">Aventus Classic Whitepaper (2019)</a></strong></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/intro"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/classic-overview"><span>Overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/AventusLogoStandaloneSquareWhite.png" alt="Aventus Protocol" width="66" height="58"/></a><div><h5>Company</h5><a href="https://aventus.io/" target="_blank" rel="noreferrer noopener">Aventus</a><a href="https://aventus.io/privacy-policy/">Privacy Policy</a><a href="https://aventus.io/tc/">T&amp;C</a><a href="https://blog.aventus.io/" target="_blank" rel="noreferrer noopener">Blog</a></div><div><h5>More</h5><a href="https://github.com/AventusProtocolFoundation" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://www.facebook.com/AventusNetwork/" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://twitter.com/AventusNetwork" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.linkedin.com/company/aventusnetwork/" target="_blank" rel="noreferrer noopener">LinkedIn</a></div></section><section class="copyright">Copyright © 2019 Aventus Protocol Foundation</section></footer></div></body></html>

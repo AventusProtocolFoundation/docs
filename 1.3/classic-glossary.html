@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Glossary · Aventus Protocol</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Events"/><meta name="docsearch:version" content="1.3"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Glossary · Aventus Protocol"/><meta property="og:type" content="website"/><meta property="og:url" content="https://github.com/AventusProtocolFoundation/docs/"/><meta property="og:description" content="## Events"/><meta property="og:image" content="https://github.com/AventusProtocolFoundation/docs/img/aventus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://github.com/AventusProtocolFoundation/docs/img/aventus.png"/><link rel="shortcut icon" href="/docs/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-block-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/"><img class="logo" src="/docs/img/AventusLogoStandaloneWhite.png" alt="Aventus Protocol"/><h2 class="headerTitleWithLogo">Aventus Protocol</h2></a><a href="/docs/versions"><h3>1.3</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://github.com/AventusProtocolFoundation" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Resources</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Aventus</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/1.3/intro">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Aventus Classic</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/1.3/classic-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3/classic-contracts">Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3/classic-ticket-guides">Ticket Guides</a></li><li class="navListItem"><a class="navItem" href="/docs/1.3/classic-proposal-guides">Proposal Guides</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Resources</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/1.3/classic-tools">Tools</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/1.3/classic-glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Glossary</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
+<ul>
+<li><strong>Access Control</strong> is the selective restriction of access to an <em>event</em> or other resource. Within our ecosystem, permission to access is granted with a <em>ticket</em> that is referenced as valid in the <em>doorlist</em></li>
+<li><strong>Doorlist</strong> is a static list of all of the valid <em>tickets</em> for an <em>event</em> used for <em>access control</em>. The doorlist can be compiled at any time in the event lifecycle but as <em>ticket</em> ownership updates (<em>resale</em> &amp; <em>transfer</em>) can still happen in the run up to an <em>event</em>, the list is only useful for <em>access control</em> at the <em>eventTime</em></li>
+<li><strong>Event</strong> A parent object on the <em>Aventus Protocol</em> which has an <em>eventOwner</em> and can have associated <em>roles</em>. The purpose of an event is to group children objects, <em>tickets</em>, into manageable and referenceable allocations. Events on the Protocol are designed to align with real-world physical events (ie. Live performance, sports game, conference, etc.) meaning the <em>eventTime</em> should match the real-world time the event is due to take place</li>
+<li><strong>eventId</strong> A unique identifier for the <em>event</em> on the <em>Protocol</em>, see <a href="glossary#ids">IDs</a> for more info</li>
+<li><strong>eventOwner</strong> The <em>role</em> of the user who creates the <em>event</em> on the <em>Protocol</em>, see <a href="glossary#roles">Roles</a> for more info</li>
+<li><strong>eventTime</strong> A <a href="https://en.wikipedia.org/wiki/Unix_time">Unix Epoch time</a> to signify the time of the real-world physical <em>event</em>. Also used by the <em>Protocol</em> to calculate the required <em>Merkle Root</em> <em>deposit</em>, see <a href="glossary#avt">AVT</a> for more info</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="tickets"></a><a href="#tickets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tickets</h2>
+<ul>
+<li><strong>Ticket</strong> A permission that indicates that an individual is entitled to admission to an <em>event</em> tied to an address in a <em>Ticket Wallet</em>. A <em>ticketOwner</em> typically pays for a ticket, but our ecosystem is focussed on ticket delivery &amp; handling, so payment considerations are dealt with externally. Ticket's have built-in properties including additional details for that ticket, typically including fields like: grouping (ie. VIP, Earlybird), gate number, row / seat number, etc.</li>
+<li><strong>ticketId</strong> A unique identifier for the <em>ticket</em> on the <em>Protocol</em>, see <a href="glossary#ids">IDs</a> for more info</li>
+<li><strong>ticketOwner</strong> The bearer of a <em>ticket</em>, see <a href="glossary#roles">Roles</a> for more info</li>
+<li><strong>Resale</strong> Within the Aventus ecosystem a <em>ticket</em> owned by a <em>ticketOwner</em> can be resold to another <em>Ticket Wallet</em>, updating the ownership associated with that <em>ticket</em> on the blockchain</li>
+<li><strong>Cancel</strong> Another action that can be taken on a <em>ticket</em> is a cancellation, meaning that the <em>ticketOwner</em> will no longer be represented on the <em>doorlist</em> so they cannot attend the <em>event</em></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="roles"></a><a href="#roles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Roles</h2>
+<ul>
+<li><strong>eventOwner</strong> The <em>role</em> of the user who creates the <em>event</em> on the <em>Protocol</em>. Identified by an <em>Ethereum</em> <em>address</em>, the eventOwner has full admin permissions to carry out event-level actions such as; new <em>role</em> registration, <em>ticket</em> creation, and <em>ticket</em> cancellation</li>
+<li><strong>Primary</strong> A ticket administrator in the primary market (initial ticket sales). Identified by an <em>Ethereum</em> <em>address</em>, the Primary has permissions to carry out ticket-level actions such as; <em>ticket</em> creation, and <em>ticket</em> cancellation</li>
+<li><strong>Secondary</strong> A third party ticket administrator in the secondary market (pre-owned tickets for resale). Identified by an <em>Ethereum</em> <em>address</em>, the Secondary only has permission to carry <em>resell</em> <em>tickets</em></li>
+<li><strong>ticketOwner</strong> The current bearer of a <em>ticket</em>. As ownership can be updated via a <em>resell</em> or <em>transfer</em> this is not always the person who first purchased the ticket from a <em>Primary</em></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="blockchain"></a><a href="#blockchain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Blockchain</h2>
+<ul>
+<li><strong>Blockchain</strong> is a distributed public ledger</li>
+<li><strong>Ether</strong> is the name of the currency used within <em>Ethereum</em> used to pay for computation within the <em>EVM</em>. This is done indirectly by purchasing something known as <em>gas</em> for each transaction sent to the network with Ether</li>
+<li><strong>Ethereum</strong> is a decentralized platform for applications that run exactly as programmed without any chance of fraud or third-party interference using network consensus. Check out the <a href="https://github.com/ethereum/wiki/wiki/White-Paper">original Whitepaper</a> for more info</li>
+<li><strong>Event (Solidity)</strong> is an activity within <em>Solidity</em> that notifies to any listener that something happened on the originating service. These activities are usually published to a <a href="https://ethereum.stackexchange.com/questions/12950/what-are-event-topics">topic</a> for listeners</li>
+<li><strong>EVM</strong></li>
+<li><strong>Ganache</strong> is a <a href="http://truffleframework.com/ganache/">Node.js based Ethereum client</a> for testing and development (previously referred to as 'testRPC')</li>
+<li><strong>Gas</strong> is required for each transaction on the <em>Ethereum</em> network and acts as an execution fee to account for computational usage of the <em>EVM</em>. <em>Nodes</em> on the network are paid in gas to process transactions, for more info <a href="https://blockgeeks.com/guides/ethereum-gas-step-by-step-guide/">see here</a></li>
+<li><strong>Geth</strong> is the the command line interface for running a full <em>Ethereum</em> <em>node</em> <a href="https://geth.ethereum.org/">implemented in Go</a></li>
+<li><strong>Libraries</strong> in <em>Ethereum</em> are special types of <em>smart contract</em> which do not store data and cannot hold <em>ether</em>. They are are only required to be deployed once and their functions can then be called by any <em>smart contract</em> via <a href="https://blog.aragon.one/library-driven-development-in-solidity-2bebcaf88736">delegate calls</a>]</li>
+<li><strong>Smart Contract</strong> allow the performance of credible transactions without third parties, see <a href="https://en.wikipedia.org/wiki/Smart_contract">more here</a></li>
+<li><strong>Solidity</strong> is a <a href="https://solidity.readthedocs.io/en/latest/">contract-oriented programming language</a> for writing <em>smart contracts</em> that runs on the <em>EVM</em></li>
+<li><strong>Rinkeby</strong> is a public <em>Ethereum</em> <a href="https://support.coinbase.com/customer/en/portal/articles/1973566-what-is-the-testnet-">testnet</a> and the one used by the Aventus Protocol</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="ids"></a><a href="#ids" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IDs</h2>
+<ul>
+<li><strong>ticketRef</strong> A reference provided by the <em>eventOwner</em> (or <em>Primary</em>) used to uniquely identify a <em>ticket</em> throughout the system. No specific structure for the string is mandated, other than the uniqueness is met per <em>ticket</em> for each <em>eventOwner</em>. This value is then referred to as a <em>vendorTicketRef</em> as it is unique to that particular <em>vendor</em> for that particular <em>event</em></li>
+<li><strong>VendorTicketRefHash</strong> The <em>vendorTicketRef</em> is passed in hashed, it is then appended with the vendor address and hashed again to ensure uniqueness across vendors, before being cast into the Protocol <em>ticketId</em></li>
+<li><strong>ticketId</strong> A unique <em>ticketRef</em> for each <em>ticket</em> made up of the <em>vendorTicketRef</em> and the <em>vendor</em> address to ensure proper uniqueness across potential multiple <em>primary</em> vendors in a uint256 format</li>
+<li><strong>eventId</strong> A unique (always incrementing) number associated with each event that is assigned by the <em>Protocol</em> upon creation. Globally unique across the <em>Protocol</em> and all <em>events</em> to ever exist in it</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="avt"></a><a href="#avt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AVT</h2>
+<ul>
+<li><strong>Attoavt</strong> the smallest unit of AVT, 1 attoavt is 10^-18 AVT</li>
+<li><strong>Aventus Community</strong> is made up of <em>AVT</em> token holders interested in utilising the <em>Aventus Protocol</em></li>
+<li><strong>AVT</strong> is the <a href="https://en.wikipedia.org/wiki/ERC-20">ERC-20 token</a> used in the <em>Aventus Protocol</em> (originally referred to as an AventCoin many moons ago)</li>
+<li><strong>Challenge</strong> The <em>Aventus Community</em> can challenge the legitimacy of <em>Merkle Leaf</em> on the <em>Protocol</em>. This is incentivised by the challenger winning the <em>deposit</em> of <em>AVT</em> put down by the original <em>Validator</em> if a challenge is successful</li>
+<li><strong>Deposit</strong> An amount of <em>AVT</em> required for certain interactions with the <em>Protocol</em> that are open to <em>challenge</em>. The deposit is an incentive for a <em>Validator</em> to act correctly as any unwanted behaviour will result in their deposit being lost</li>
+<li><strong>Governance Proposal</strong> <em>Aventus Community</em> members can propose <a href="https://blockonomi.com/blockchain-governance/">governance</a> changes to the <em>Protocol</em> parameters on the <em>Parameter Registry</em>. Once a proposal has been initiated, members can vote on wether the change should be applied or not by voting with their <em>AVT</em> stake. Each proposal has defined time-periods in which certain actions must take place:
+<ul>
+<li><strong>Lobbying Period</strong> is the 2 week time slot at the start of the <em>Governance Proposal</em> process where the <em>Aventus Community</em> can externally discuss and debate a new proposal, followed by the <em>Voting Period</em></li>
+<li><strong>Voting Period</strong> is the 1 week time slot following a <em>Lobbying Period</em> during the proposal process where the <em>Aventus Community</em> can submit secret signed votes on whether a <em>Governance Proposal</em> should be applied or not</li>
+<li><strong>Reveal Period</strong> is the 1 week time slot following a <em>Voting Period</em> at the end of the proposal process where the <em>Aventus Community</em> can reveal their vote by re-submitting a secret signed vote on a <em>Governance Proposal</em>. Once all votes have been revealed then the
+proposal process can be concluded and <em>AVT</em> amounts for each vote option are tallied to decide a winner</li>
+</ul></li>
+<li><strong>Hashing</strong> takes an input string of any length and gives an encrypted output of a deterministic fixed length string. Hashing is used throughout the <em>Protocol</em> alongside <em>Signing</em>. Try out <a href="https://emn178.github.io/online-tools/keccak_256.html">this example here</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/1.3/classic-tools"><span class="arrow-prev">← </span><span>Tools</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#events">Events</a></li><li><a href="#tickets">Tickets</a></li><li><a href="#roles">Roles</a></li><li><a href="#blockchain">Blockchain</a></li><li><a href="#ids">IDs</a></li><li><a href="#avt">AVT</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/" class="nav-home"><img src="/docs/img/AventusLogoStandaloneSquareWhite.png" alt="Aventus Protocol" width="66" height="58"/></a><div><h5>Company</h5><a href="https://aventus.io/" target="_blank" rel="noreferrer noopener">Aventus</a><a href="https://aventus.io/privacy-policy/">Privacy Policy</a><a href="https://aventus.io/tc/">T&amp;C</a><a href="https://blog.aventus.io/" target="_blank" rel="noreferrer noopener">Blog</a></div><div><h5>More</h5><a href="https://github.com/AventusProtocolFoundation" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://www.facebook.com/AventusNetwork/" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://twitter.com/AventusNetwork" target="_blank" rel="noreferrer noopener">Twitter</a><a href="https://www.linkedin.com/company/aventusnetwork/" target="_blank" rel="noreferrer noopener">LinkedIn</a></div></section><section class="copyright">Copyright © 2019 Aventus Protocol Foundation</section></footer></div></body></html>
