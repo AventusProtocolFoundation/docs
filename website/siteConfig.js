@@ -37,8 +37,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { href: 'https://github.com/AventusProtocolFoundation', label: 'GitHub' },
-    { href: 'https://github.com/AventusProtocolFoundation/docs/blob/master/resources/Aventus%20Classic%20Whitepaper.pdf', label: 'Whitepaper' },
+    { href: 'https://github.com/AventusProtocolFoundation', label: 'GitHub' }
   ],
 
   // If you have users set above, you add it here:
