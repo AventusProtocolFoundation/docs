@@ -35,7 +35,7 @@ This can be accessed via the AVT Faucet contract deployed on Rinkeby, see the [T
 
 ### Event Deposit
 
-Every new event requires a deposit of 2000 AVT (1000 AVT if the event is free), which is returned to the owner once the `eventTime` has passed. If an event is voted to be fraudulent by the community, the event deposit will be shared amongst the voting community.
+Every new event requires a deposit of 20 AVT (10 AVT if the event is free), which is returned to the owner once the `eventTime` has passed. If an event is voted to be fraudulent by the community, the event deposit will be shared amongst the voting community.
 
 ### Member Deposit
 
