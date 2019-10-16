@@ -19,7 +19,7 @@ Rinkeby contract addresses:
 
 ## Faucet
 
-The AVTFaucet contract can drip 10AVT per day to any address. See [here](classic-tools) for details.
+The AVTFaucet contract can drip 10AVT per day to any address. See [here](classic-tools.md) for details.
 
 This is enough to create an event that does not charge for its tickets: 20AVT is required for a paid event.
 
