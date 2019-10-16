@@ -19,18 +19,13 @@ Rinkeby contract addresses:
 
 ## Faucet
 
-The AVTFaucet contract can drip 10AVT per day to any address.
+The AVTFaucet contract can drip 10AVT per day to any address. See [here](classic-tools) for details.
 
 This is enough to create an event that does not charge for its tickets: 20AVT is required for a paid event.
 
-Call the:
-- drip() function to get your AVT.
-- getNextPaymentTime() function to see when you can next get a drip.
-
-
 ## Interfaces
 
-All our othercontracts are accessed via interfaces, as defined in the contracts/interfaces directory:
+All our other contracts are accessed via interfaces, as defined in the contracts/interfaces directory:
 
 - **IAventusStorage** the storage contract for all data in the Aventus Protocol
 - **IAVTManager** the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol
