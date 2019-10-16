@@ -38,7 +38,7 @@ None
 ### Method: `getNextPaymentTime`
 
 Get the timestamp for when msg.sender can next call `drip`.
-If zero, `drip` can be called immediately.
+If in the past, `drip` can be called immediately.
 
 #### Method Parameter Descriptions
 
