@@ -17,9 +17,15 @@ Rinkeby contract addresses:
 - **MembersManager** [0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647](https://rinkeby.etherscan.io/address/0xf1486E2bAC192B538e2D9906D09BeCa0Fd4F1647)
 - **ProposalsManager** [0xE4F3A588140ec425aF307C7aED873188a9b9534e](https://rinkeby.etherscan.io/address/0xE4F3A588140ec425aF307C7aED873188a9b9534e)
 
+## Faucet
+
+The AVTFaucet contract can drip 10AVT per day to any address. See [here](classic-tools.md) for details.
+
+This is enough to create an event that does not charge for its tickets: 20AVT is required for a paid event.
+
 ## Interfaces
 
-All our contracts are accessed via interfaces, as defined in the contracts/interfaces directory:
+All our other contracts are accessed via interfaces, as defined in the contracts/interfaces directory:
 
 - **IAventusStorage** the storage contract for all data in the Aventus Protocol
 - **IAVTManager** the AVT management contract: use this for depositing and withdrawing AVT into and out of the protocol
